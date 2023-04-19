@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array sort method</title>
+</head>
+
+<body>
+
+    <p id="demo">1</p>
+    <hr>
+    </hr>
+
+    <button onclick="myFunction()">rendomly access araay element </button>
+    <p id="dem"></p>
+    <hr>
+    </hr>
+
+    <button onclick="fishe()">Fisher element </button>
+    <p id="de"></p>
+    <hr>
+    </hr>
+    
+    <p id="d"></p>
+    <hr>
+    </hr>
+    <p id="m"></p>
+    <hr>
+    </hr>
+
+    <script>
+        // < Sort no assending order-->
+        const points = [40, 100, 1, 5, 25, 10];
+        points.sort(function (a, b) { return a - b });
+        document.getElementById("demo").innerHTML = points;
+
+
+
+        // < Sort no Random Order-->
+        const numer = [100, 200, 300, 400, 500];
+        function myFunction() {
+            numer.sort(function () { return 0.5 - Math.random() });
+            document.getElementById("dem").innerHTML = numer;
+        }
+
+
+        // < Sort no   Fisher Yates Method>
+        const nume = [1, 2, 3, 4, 5];
+        let len = nume.length;
+        function fishe() {
+            let nu = nume[Math.floor(Math.random() * len)];
+            document.getElementById("de").innerHTML = nu;
+        }
+        
+
+        // < Sort no max and min value in araay-->
+        const poi = [40, 100, 1, 5, 25, 10];
+        document.getElementById("d").innerHTML = myArrayMax(poi);
+        document.getElementById("m").innerHTML = myArraymin(poi);
+
+        function myArrayMax(arr) {
+            return Math.max.apply(null, arr);
+        }
+        
+        function myArraymin(arr) {
+            return Math.min.apply(null, arr);
+        }
+
+
+    </script>
+</body>
+
+</html>

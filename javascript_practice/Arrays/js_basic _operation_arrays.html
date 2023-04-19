@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays_Operation</title>
+</head>
+
+<body>
+  <p id="demo"></p>
+  <hr></hr>
+  <p id="dem"></p>
+  <p id="de"></p>
+  <p id="d"></p>
+  <hr></hr>
+  <p id="mai"></p>
+  <hr></hr>
+  <p id="main"></p>
+
+
+  <script>
+    // new array create
+    const cars = ["Sona", "Mona", "Mina", 40,
+      [30, "Shika"],
+      [50, 60, 30, 40, 10]
+    ];
+    document.getElementById("demo").innerHTML = cars;
+
+
+
+
+   // new array create and access for using forloop 
+    const color = []
+    color[0] = "Pink";
+    color[1] = 80
+    color[2] = "Black";
+
+    let len = color.length;
+
+    let colortext = "<ul>";
+    for (let i = 0; i < len; i++) {
+      colortext += "<li>" + color[i] + "</li>";
+    }
+    colortext += "</ul>";
+    document.getElementById("dem").innerHTML = typeof [color];
+    document.getElementById("de").innerHTML = color.length;
+    document.getElementById("d").innerHTML = color[color.length - 1];
+    document.getElementById("main").innerHTML = colortext;
+
+
+
+
+    
+    // new array object
+    const namee = { fname: "Shona", lname: "Gayki" };
+    document.getElementById("main").innerHTML = namee.fname +" "+ namee.lname;
+
+
+
+
+   // new array for forEach loop
+    const days = ["mon", "tus", "wed"];
+
+    let daystext = "<ul>";
+    days.forEach(myfunction)
+    daystext += "</ul>"
+
+    function myfunction(value) {
+    daystext += "<li>" + value + "</li>"
+
+    }
+    document.getElementById("mai").innerHTML = daystext;
+
+
+
+
+
+</script>
+
+</body>
+
+</html>

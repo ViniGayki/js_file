@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="image/sona.jpg">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Msg Repeating_and_print</title>
+</head>
+
+<body>
+    <h>Multipule time msg print</h><br>
+    <input type="text" id="textbox" name="message">
+    <!-- <button id="button">GeeksForGeeks</button> -->
+    <p id="message"></p>
+
+    <script>
+
+        let msg = document.getElementById("message");
+        //  let button = document.getElementById("button");
+        let textBox = document.getElementById("textbox");
+
+
+        textbox.addEventListener("click", function () {
+            let str = textBox.value;
+            // console.log(str);
+            msg.innerHTML += "<p>" + str + "</p>";
+        });
+        textBox.addEventListener("keyup", function (event) {
+
+            if (event.keyCode == 13) {
+                textbox.click();
+            }
+        });
+    </script>
+
+</body>
+</html>
+

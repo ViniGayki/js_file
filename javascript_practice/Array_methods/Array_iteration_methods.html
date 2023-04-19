@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array_iteration_method</title>
+</head>
+
+<body>
+  <p id="demo"></p>
+  <hr>
+  </hr>
+  <p id="dem"></p>
+  <hr>
+  </hr>
+  <p id="de"></p>
+  <hr>
+  </hr>
+  <p id="d"></p>
+  <hr>
+  </hr>
+  <p id="memo"></p>
+  <hr>
+  </hr>
+  <p id="mem"></p>
+  <hr>
+  </hr>
+  <p id="me"></p>
+  <hr>
+  </hr>
+  <p id="m"></p>
+  <hr>
+  </hr>
+  <p id="practice"></p>
+  <hr>
+  </hr>
+  <p id="practi"></p>
+  <hr>
+  </hr>
+  <p id="prac"></p>
+  <hr>
+  </hr>
+  <p id="pra"></p>
+  <hr>
+  </hr>
+  <p id="pr"></p>
+  <hr>
+  </hr>
+
+  <script>
+
+
+    // javasript for foreach loop
+    const nume = [1, 2, 3, 4, 5, 6];
+
+    let tex = "";
+    nume.forEach(myfun);
+
+    document.getElementById("demo").innerHTML = tex;
+
+    function myfun(value) {
+      tex += value + "<br>";
+    }
+    // --------------------------------------------------//
+
+
+    //array operation using   MAP    mrthod multiplication
+    const num = [20, 30, 40, 50, 60];
+    const newnum = num.map(myfunc);
+
+    document.getElementById("dem").innerHTML = newnum;
+
+    function myfunc(value) {
+      return value * 2;
+    }
+    //  ------------------------------------------------//
+
+
+    //array without fun operation using   FLAT  mrthod multiplication
+    const numbers1 = [45, 4, 9, 16, 25];
+    const num2 = numbers1.flatMap((x) => x * 2);
+
+    document.getElementById("de").innerHTML = num2;
+    //  ------------------------------------------------//
+
+
+    //array operation using      FILTER  mrthod multiplication
+    const numbers = [45, 4, 9, 16, 25];
+    const over18 = numbers.filter(myFunct);
+
+    document.getElementById("d").innerHTML = over18;
+
+    function myFunct(value, index, array) {
+      return value > 18;
+    }
+    //  ------------------------------------------------//
+
+
+
+    //array operation using   REDUCE  mrthod multiplication
+    const number = [45, 4, 9, 16, 25];
+    let sum = number.reduce(myFunction, 100);
+
+    document.getElementById("memo").innerHTML = "The sum is " + sum;
+
+    function myFunction(total, value, index, array) {
+      return total + value;
+    }
+    // ******reduceRight()  method -----> works from right-to-left in the array.
+    //  ------------------------------------------------//
+
+
+
+    //array operation using Array.every() method
+
+    const numb = [8, 16, 20];
+
+    // let allO = numb.every(myFunctio);
+    let allO = numbers.some(myFunctio);
+
+    document.getElementById("mem").innerHTML = "All over 2 is " + allO;
+
+    function myFunctio(value, index, array) {
+      return value > 2;
+    }
+    //------------------------------------------------//
+
+
+    //array operation using   indexof method (search method) 
+    const fruits = ["Apple", "Orange", "Orange", "Mango"];
+    // let position = fruits.indexOf("Orange") + 1;
+    let position = fruits.lastIndexOf("Apple") + 1;
+    document.getElementById("me").innerHTML = "Apple is found in position " + position;
+
+    //find method()
+    const numbe = [4, 9, 16, 25, 29];
+    let first = numbe.find(myF);
+    document.getElementById("m").innerHTML = "First number over 18 is " + first;
+
+    function myF(value, index, array) {
+      return value > 18;
+    }
+
+
+    // findindex()
+    const tn = [4, 9, 16, 25, 29];
+    document.getElementById("practice").innerHTML = "First number over 18 has index " + tn.findIndex(myFunction);
+
+    function myFunction(value, index, array) {
+      return value > 18;
+    }
+
+
+    // array.form()
+    const myArr = Array.from("ABCDEFG");
+    document.getElementById("practi").innerHTML = myArr;
+
+
+
+    // Array.keys() and // The entries() method
+    const fru = ["Banana", "Orange", "Apple", "Mango"];
+    // const keys = fru.keys();
+    const keys = fru.entries();
+    let text = "";
+    for (let x of keys) {
+      text += x + "<br>";
+    }
+    document.getElementById("prac").innerHTML = text;
+
+
+
+
+    // Array includes() search element  and given and false
+    const f = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("pra").innerHTML = f.includes("sona");
+
+    
+
+    // Array Spread 
+    const q1 = ["Jan", "Feb", "Mar"];
+    const q2 = ["Apr", "May", "Jun"];
+    const q3 = ["Jul", "Aug", "Sep"];
+    const q4 = ["Oct", "Nov", "May"];
+
+    const year = [...q1, ...q2, ...q3, ...q4];
+    document.getElementById("pr").innerHTML = year;
+
+//  ------------------------------------------------//
+
+
+
+  </script>
+</body>
+
+</html>

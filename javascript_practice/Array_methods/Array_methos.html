@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array_method_operation</title>
+</head>
+
+<body>
+    <p id="demo">1</p>
+    <p id="dem">2</p>
+    <p id="de">3</p>
+    <hr>
+    </hr>
+    <p id="d">4</p>
+    <p id="main">5</p>
+    <hr>
+    </hr>
+    <p id="mai">6</p>
+    <p id="ma">7</p>
+    <hr>
+    </hr>
+    <p id="m">8</p>
+    <hr>
+    </hr>
+    <p id="practies">9</p>
+    <hr>
+    </hr>
+    <p id="prac">10</p>
+    <hr>
+    </hr>
+    <p id="pra">11</p>
+    <hr>
+    </hr>
+    <p id="pr">12</p>
+    <hr>
+    </hr>
+    <p id="p">13</p>
+    <hr>
+    </hr>
+    <p id="farmu">14</p>
+    <hr>
+    </hr>
+    <p id="farm">15</p>
+    <hr>
+    </hr>
+    <script>
+        const flowers = ["Rose", "Lotas", "Jasmine"]
+
+        document.getElementById("demo").innerHTML = flowers.sort();
+        document.getElementById("dem").innerHTML = flowers.reverse();
+        document.getElementById("de").innerHTML = flowers.join(" * ");
+
+        flowers.push("levender");
+        document.getElementById("d").innerHTML = flowers;
+
+        flowers.pop();
+        document.getElementById("main").innerHTML = flowers;
+
+
+        flowers.unshift("levender");
+        document.getElementById("mai").innerHTML = flowers;
+
+        flowers.shift();
+        document.getElementById("ma").innerHTML = flowers;
+
+        //   Replace element
+        flowers[0] = "marygold";
+        document.getElementById("m").innerHTML = flowers;
+
+        // without using pushing method add element
+        flowers[flowers.length] = "Crossandra";
+        document.getElementById("practies").innerHTML = flowers;
+
+        // without using shift method delete element
+        delete flowers[0];
+        document.getElementById("prac").innerHTML = flowers;
+
+
+        // both array concat
+        const myBoys = ["Emil", "Tobias", "Linus"];
+        const myGirl = ["Cecilie"];
+        const myGirls = ["Robin", "Morgan", "Lone"];
+        const mychildern = myBoys.concat(myGirl, myGirls);
+        document.getElementById("pra").innerHTML = mychildern;
+
+
+        
+
+        // push element using concat 
+        const Boy = ["Guddu", "sonu"];
+        const girl = Boy.concat("monu");
+        document.getElementById("pr").innerHTML = girl;
+
+        // array element falting
+        const myArr = [[1, 2], [3, 4], [5, 6],7];
+        document.getElementById("p").innerHTML = myArr;
+
+         //inbetween element push
+         const fruits = ["Banana", "Orange", "Apple", "Mango"];
+         fruits.splice(2, 1 , "Lemon", "Kiwi");
+        document.getElementById("farmu").innerHTML = fruits;
+
+
+      //inbetween element remove
+       let rem = fruits.slice(2);
+        document.getElementById("farm").innerHTML = rem;
+        
+
+</script>
+</body>
+
+</html>
