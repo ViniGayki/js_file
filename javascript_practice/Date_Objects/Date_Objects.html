@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Date Objects</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <hr></hr>
+    <p id="dem"></p>
+    <hr></hr>
+    <script>
+        const d = new Date(2012, 11, 24);
+        document.getElementById("demo").innerHTML = d;
+
+        // const c = new Date(99, 11, 24);
+        // const c = new Date(1990,11);
+        // const c = new Date(1990);
+        const c = new Date(86400000);
+        // document.getElementById("dem").innerHTML = c;
+        // document.getElementById("dem").innerHTML = c.toString();
+        // document.getElementById("dem").innerHTML = c.toDateString();
+        document.getElementById("dem").innerHTML = c.toUTCString();
+        // --------------------------------------------------------------//
+
+
+        // Date Formats
+
+
+
+
+    </script>
+</body>
+
+</html>
