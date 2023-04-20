@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boolean_operation</title>
+</head>
+
+<body>
+    <p id="demo5"></p>
+    <hr>
+    </hr>
+    <p id="demo6"></p>
+    <hr>
+    </hr>
+    <p id="demo7"></p>
+    <hr>
+    </hr>
+    <p id="demo8"></p>
+    <hr>
+    </hr>
+    <p id="demo9"></p>
+    <hr>
+    </hr>
+    <p id="demo10"></p>
+    <hr>
+    </hr>
+    <p id="demo11"></p>
+    <hr>
+    </hr>
+    <p id="demo12"></p>
+    <hr>
+    </hr>
+    <p id="demo13"></p>
+    <hr>
+    </hr>
+
+    <script>
+        //JavaScript Booleans
+        document.getElementById("demo5").innerHTML = Boolean(10 > 9);
+
+        let x = 0;
+        document.getElementById("demo6").innerHTML = Boolean(x);
+
+        // Boolean value of undefined:
+        let xg;
+        document.getElementById("demo7").innerHTML = Boolean(xg);
+
+        // Display the Boolean value of null:
+        let xh = null;
+        document.getElementById("demo8").innerHTML = Boolean(xh);
+
+        // Display the Boolean value of NaN:
+        let xi = 10 / "Hello";
+        document.getElementById("demo9").innerHTML = Boolean(xi);
+
+        // check type of boolean and boolean object
+        let xj = false;
+        let y = new Boolean(false);
+        document.getElementById("demo10").innerHTML = typeof xj + "<br>" + typeof y;
+
+        // Booleans and Boolean objects cannot be safely compared:
+        let xk = false;         // x is a boolean
+        let yl = new Boolean(false);  // y is an object
+        document.getElementById("demo11").innerHTML = (xk == yl);
+
+    </script>
+</body>
+
+</html>
