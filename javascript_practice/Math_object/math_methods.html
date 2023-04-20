@@ -36,6 +36,19 @@
     <p id="min"></p>
     <hr>
     </hr>
+    <p id="demo2"></p>
+    <hr>
+    </hr>
+    <p id="demo3"></p>
+    <hr>
+    </hr>
+    <p id="demo4"></p>
+    <button onclick="document.getElementById('demo4').innerHTML = getRndInteger(0,10)">Click Me</button>
+    <hr>
+    </hr>
+    
+
+
     <script>
         // Number to Integer methods
 
@@ -49,11 +62,27 @@
         document.getElementById("ma").innerHTML = Math.trunc(4.7);
         //  returns if x is negative, null or positive
         document.getElementById("m").innerHTML = Math.sign(10);
-        // ----------------------------------------------------------------------
-        document.getElementById("powe").innerHTML = Math.pow(-20,-2);
+        // ----------------------------------------------------------------------//
+
+
+        document.getElementById("powe").innerHTML = Math.pow(-20, -2);
         document.getElementById("sqrte").innerHTML = Math.sqrt(64);
         document.getElementById("positive").innerHTML = Math.abs(-4.7);
         document.getElementById("min").innerHTML = Math.min(0, 150, 30, 20, -8, -200);
+        // ----------------------------------------------------------------------//
+
+        // math.random methods
+        document.getElementById("demo2").innerHTML = Math.random();
+        document.getElementById("demo3").innerHTML = Math.floor(Math.random() * 10);
+        // document.getElementById("dem3").innerHTML =Math.floor(Math.random() * 10) + 1;
+
+        // A Proper Random Function
+        function getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min)) + max;
+
+        }
+        
+
     </script>
 </body>
 
