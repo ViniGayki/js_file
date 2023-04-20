@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math_methods</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <hr>
+    </hr>
+    <p id="mathe"></p>
+    <hr>
+    </hr>
+    <p id="mat"></p>
+    <hr>
+    </hr>
+    <p id="ma"></p>
+    <hr>
+    </hr>
+    <p id="m"></p>
+    <hr>
+    </hr>
+    <p id="powe"></p>
+    <hr>
+    </hr>
+    <p id="sqrte"></p>
+    <hr>
+    </hr>
+    <p id="positive"></p>
+    <hr>
+    </hr>
+    <p id="min"></p>
+    <hr>
+    </hr>
+    <script>
+        // Number to Integer methods
+
+        // Math.round(x) returns the nearest integer:
+        document.getElementById("demo").innerHTML = Math.round(4.6);
+        // ceil method number up to its nearest integer:
+        document.getElementById("mathe").innerHTML = Math.ceil(4.4);
+        // floor method number Down to its nearest integer:
+        document.getElementById("mat").innerHTML = Math.floor(4.7);
+        // trunc method returns the integer part:
+        document.getElementById("ma").innerHTML = Math.trunc(4.7);
+        //  returns if x is negative, null or positive
+        document.getElementById("m").innerHTML = Math.sign(10);
+        // ----------------------------------------------------------------------
+        document.getElementById("powe").innerHTML = Math.pow(8,2);
+        document.getElementById("sqrte").innerHTML = Math.sqrt(64);
+        document.getElementById("positive").innerHTML = Math.abs(-4.7);
+        document.getElementById("min").innerHTML = Math.min(0, 150, 30, 20, -8, -200);
+    </script>
+</body>
+
+</html>
