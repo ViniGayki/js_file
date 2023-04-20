@@ -10,9 +10,27 @@
 
 <body>
     <p id="demo"></p>
-    <hr></hr>
+    <hr>
+    </hr>
     <p id="dem"></p>
-    <hr></hr>
+    <hr>
+    </hr>
+    <p id="de"></p>
+    <hr>
+    </hr>
+    <p id="d"></p>
+    <hr>
+    </hr>
+    <p id="memo"></p>
+    <hr>
+    </hr>
+    <p id="practice"></p>
+    <hr>
+    </hr>
+    <p id="practi"></p>
+    <hr>
+    </hr>
+
     <script>
         const d = new Date(2012, 11, 24);
         document.getElementById("demo").innerHTML = d;
@@ -28,7 +46,58 @@
         // --------------------------------------------------------------//
 
 
-        // Date Formats
+        // get method
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const y = new Date("2023-04-20");
+
+        const date = Date.now();
+        // document.getElementById("de").innerHTML = date;
+        document.getElementById("de").innerHTML = y.getFullYear();
+        //1 document.getElementById("de").innerHTML = y.getMonth() + 1;
+        // document.getElementById("de").innerHTML = y.getDate();
+        // document.getElementById("de").innerHTML = y.getHours();
+        // document.getElementById("de").innerHTML = y.getMinutes();
+        // document.getElementById("de").innerHTML = y.getSeconds();
+        // document.getElementById("de").innerHTML = y.getMilliseconds();
+        // document.getElementById("de").innerHTML = y.getDay();
+        // document.getElementById("de").innerHTML = y.getTime();
+        // document.getElementById("demo").innerHTML = y.getTimezoneOffset();
+        let month = months[y.getMonth()];
+        document.getElementById("d").innerHTML = month;
+
+        let day = days[y.getDay()];
+        document.getElementById("memo").innerHTML = day;
+
+        // --------------------------------------------------------------//
+
+
+
+        //  set methods
+        const e = new Date(2020, 4, 14);
+        // e.setFullYear(2020);
+        // e.setFullYear(2020, 11, 3);
+        // e.setMonth(11);
+        // e.setDate(15);
+        // e.setDate(d.getDate() + 50);
+        // e.setHours(22);
+        // e.setMinutes(30);
+        // d.setSeconds(30);
+        document.getElementById("practice").innerHTML = e;
+
+        let text;
+        const today = new Date();
+        const someday = new Date();
+        someday.setFullYear(1999, 0, 14);
+
+        if (someday > today) {
+            text = "Today is before January 14, 2100.";
+        } else {
+            text = "Today is after January 14, 2100.";
+        }
+
+        document.getElementById("practi").innerHTML = text;
+
 
 
 
