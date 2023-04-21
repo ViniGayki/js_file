@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>break_and_continue</title>
+</head>
+
+<body>
+    <h1>break_and_continue</h1>
+    <p id="demo"></p>
+    <hr></hr>
+    <p id="demo1"></p>
+    <hr></hr>
+    <script>
+
+        let text = "";
+        for (let i = 1; i <= 10; i++) {
+            if(i==5){break;}
+            text += "Table:- " + i * 4 + "<br>";
+        }
+        document.getElementById("demo").innerHTML = text;
+
+
+        let test = "";
+        for (let j = 1; j <= 10; j++) {
+            if(j==5){continue;}
+            test += "Table:- " + j * 4 + "<br>";
+        }
+        document.getElementById("demo1").innerHTML = test;
+        </script>
+</body>
+
+</html>
