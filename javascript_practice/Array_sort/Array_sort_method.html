@@ -9,7 +9,7 @@
 </head>
 
 <body>
-
+<h1>Array sort method</h1>
     <p id="demo">1</p>
     <hr>
     </hr>
@@ -37,6 +37,7 @@
         points.sort(function (a, b) { return a - b });
         document.getElementById("demo").innerHTML = points;
 
+    //------------------------------------------------//
 
 
         // < Sort no Random Order-->
@@ -46,6 +47,7 @@
             document.getElementById("dem").innerHTML = numer;
         }
 
+    //------------------------------------------------//
 
         // < Sort no   Fisher Yates Method>
         const nume = [1, 2, 3, 4, 5];
@@ -54,7 +56,8 @@
             let nu = nume[Math.floor(Math.random() * len)];
             document.getElementById("de").innerHTML = nu;
         }
-        
+       
+    //------------------------------------------------// 
 
         // < Sort no max and min value in araay-->
         const poi = [40, 100, 1, 5, 25, 10];
@@ -66,6 +69,7 @@
         }
         
         
+    //------------------------------------------------//
         function myArraymin(arr) {
             return Math.min.apply(null, arr);
         }
