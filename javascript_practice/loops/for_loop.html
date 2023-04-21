@@ -13,17 +13,84 @@
     <p id="demo"></p>
     <hr>
     </hr>
+    <p id="demo1"></p>
+    <hr>
+    </hr>
     <p id="demo2"></p>
+    <hr>
+    </hr>
+    <p id="demo3"></p>
+    <hr>
+    </hr>
+    <p id="demo4"></p>
     <hr>
     </hr>
     <script>
 
         let text = "";
-        for (let i = 1; i < 11; i++) {
+        for (let i = 1; i <= 10; i++) {
             text += "Table:- " + i * 2 + "<br>";
-            document.getElementById("demo").innerHTML = text;
         }
+        document.getElementById("demo").innerHTML = text;
+
+        // ----------------------------------------------------------------//
+        //    using array for loop
+        const cars = ["BMW", "Volvo", "Saab", "Ford"];
+
+        let i = 0;
+        let text1 = "";
+        let len = cars.length;
+
+
+        for (; i < len;) {
+            text1 += cars[i] + "<br>";
+            i++;
+        }
+        document.getElementById("demo1").innerHTML = text1;
+        // ----------------------------------------------------------------//
+
+        // JavaScript FOR IN loop ------x is key and numbers is object
+
+        // const numbers = [45, 4, 9, 16, 25];
+        const numbers = { fname: "John", lname: "Doe", age: 25 };
+
+        let txt = "";
+        for (let x in numbers) {
+            txt += numbers[x] + "<br>";
+        }
+
+        document.getElementById("demo2").innerHTML = txt;
+
+
+        // ----------------------------------------------------------------//
+
+        //  FOREACH loop (every time using function)
+        const number = [45, 4, 9, 16, 25];
+        let tex = "";
+
+        number.forEach(myfun);
+
+        function myfun(value) {
+            tex += value + "<br>";
+        }
+        document.getElementById("demo3").innerHTML = tex;
+
+        // ----------------------------------------------------------------//
+
+        // The FOR OF Loop x is variable and car An object that has iterable properties.
+        // 1 const car = ["BMW", "Volvo", "Mini"];
+        // 2 using i/p string   let language = "JavaScript";  operation
+        let language = "JavaScript";
+        let te = "";
+        for (let x of language) {
+            te += x + "<br>";
+        }
+
+        document.getElementById("demo4").innerHTML = te;
+
     </script>
+
+
 </body>
 
 </html>
