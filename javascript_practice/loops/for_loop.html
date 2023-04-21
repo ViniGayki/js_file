@@ -25,6 +25,12 @@
     <p id="demo4"></p>
     <hr>
     </hr>
+    <p id="demo5"></p>
+    <hr>
+    </hr>
+    <p id="demo6"></p>
+    <hr>
+    </hr>
     <script>
 
         let text = "";
@@ -85,8 +91,30 @@
         for (let x of language) {
             te += x + "<br>";
         }
-
         document.getElementById("demo4").innerHTML = te;
+
+        // ----------------------------------------------------------------//
+
+        // while loop
+        let test = "";
+        let l = 0;
+        while (l <5) {
+            test += "<br>The number is " + l;
+            l++;
+        }
+        document.getElementById("demo5").innerHTML = test;
+
+        // ----------------------------------------------------------------//
+
+        // do while loop
+        let tes ="";
+        let j=0;
+        do {
+            tes += "<br>The number is " + j;
+            j++;
+        }
+        while(j<5);
+        document.getElementById("demo6").innerHTML = tes;
 
     </script>
 
