@@ -10,7 +10,11 @@
 
 <body>
     <h1>for loop create two nu table</h1>
+
     <p id="demo"></p>
+    <hr>
+    </hr>
+    <p id="de"></p>
     <hr>
     </hr>
     <p id="demo1"></p>
@@ -32,14 +36,22 @@
     <hr>
     </hr>
     <script>
-
+        // const num = parseInt(prompt('Enter an integer: '));
         let text = "";
         for (let i = 1; i <= 10; i++) {
-            text += "Table:- " + i * 2 + "<br>";
+            text += + i * 2 + "<br>";
         }
         document.getElementById("demo").innerHTML = text;
 
-        // ----------------------------------------------------------------//
+
+
+        let n = 2;
+        let t = "";
+        for (let i = 1; i <= 10; i++) {
+            document.getElementById("de").innerHTML = t +=n + " x " + i + " = " + n * i + "<br>";
+        }
+
+// ----------------------------------------------------------------//
         //    using array for loop
         const cars = ["BMW", "Volvo", "Saab", "Ford"];
 
@@ -51,6 +63,7 @@
         for (; i < len;) {
             text1 += cars[i] + "<br>";
             i++;
+
         }
         document.getElementById("demo1").innerHTML = text1;
         // ----------------------------------------------------------------//
@@ -98,7 +111,7 @@
         // while loop
         let test = "";
         let l = 0;
-        while (l <5) {
+        while (l < 5) {
             test += "<br>The number is " + l;
             l++;
         }
@@ -107,13 +120,13 @@
         // ----------------------------------------------------------------//
 
         // do while loop
-        let tes ="";
-        let j=0;
+        let tes = "";
+        let j = 0;
         do {
             tes += "<br>The number is " + j;
             j++;
         }
-        while(j<5);
+        while (j < 5);
         document.getElementById("demo6").innerHTML = tes;
 
     </script>
