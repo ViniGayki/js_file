@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map_methods</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <hr>
+    </hr>
+    <p id="demo1"></p>
+    <hr>
+    </hr>
+    <p id="demo2"></p>
+    <hr>
+    </hr>
+    <script>
+        // The size Property //MAP property/delete mapelelment
+        const fruits = new Map([
+            ["apples", 500],
+            ["bananas", 300],
+            ["oranges", 200]
+        ]);
+        fruits.delete("apples");
+        // document.getElementById("demo").innerHTML = fruits.get("bananas");
+        document.getElementById("demo").innerHTML = fruits.size
+        // ---------------------------------------------------------------//
+
+
+        // The set() Method //GET(method),
+        // The has() method returns true if a key exists in a Map:
+        const fruit = new Map();
+        fruit.set("a", 500);
+        fruit.set("b", 600);
+        fruit.set("b", 700);
+        // replce b value
+        fruits.set("b", 200);
+        // document.getElementById("demo1").innerHTML = fruit.get("a");
+        document.getElementById("demo1").innerHTML = fruit.has("a");
+        // ---------------------------------------------------------------//
+
+        // foreach loop
+        const frui = new Map([
+            ["apples", 500],
+            ["bananas", 300],
+            ["oranges", 200]
+        ]);
+
+        let text = "";
+        frui.forEach(function (value, key) {
+            text += key + ' = ' + value + "<br>"
+        })
+
+        document.getElementById("demo2").innerHTML = text;
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
