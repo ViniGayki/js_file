@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set_method</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <hr>
+    </hr>
+    <p id="demo1"></p>
+    <hr>
+    </hr>
+    <p id="demo2"></p>
+    <hr>
+    </hr>
+    <p id="demo3"></p>
+    <script>
+        // The new Set() Method
+        const fruit = new Set(["mango", "banana"]);
+        document.getElementById("demo").innerHTML = fruit.size;
+        // --------------------------------------------------------------------//
+
+        // The add() Method
+        const nume = new Set();
+        nume.add("a");
+        nume.add("b");
+        nume.add("b");
+        document.getElementById("demo1").innerHTML = nume.size;
+        // --------------------------------------------------------------------//
+
+        // The forEach() Method
+        const fruits = new Set(["mango", "banana"]);
+        let taxt = "";
+
+
+        for (const x of fruits.values()) {
+            taxt += x + "<br>";
+        }
+        // fruits.forEach(function (value) {
+        //     taxt += value + "<br>";
+        // });
+     document.getElementById("demo2").innerHTML = taxt;
+        // // --------------------------------------------------------------------//
+
+        // The values() Method
+        const fru = new Set(["mango", "banana"]);
+        document.getElementById("demo3").innerHTML = fru;
+
+    </script>
+</body>
+
+</html>
