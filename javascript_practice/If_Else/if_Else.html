@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF_ELSE</title>
+    
+</head>
+
+<body>
+    <h1>If_and _Else_if condition</h1>
+    <p id="demo"></p>
+    <script>
+        // if else
+        const hdate = new Date().getHours();
+        let out;
+        if (hdate < 30) {
+            out = "good evening";
+        }
+        else if (hdate > 30) {
+            out = "good night";
+        }
+        else {
+            out = "good morning";
+        }
+        document.getElementById("demo").innerHTML = out;
+
+    </script>
+</body>
+
+</html>
