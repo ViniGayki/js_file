@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expressions</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="demo1">Please visit Microsoft!</p>
+    <p id="demo2">Please visit Microsoft!</p>
+    <p id="demo3">Please visit Microsoft!</p>
+    <script>
+        let text = "Visit W3Schools!";
+        let n = text.search("W3Schools");
+        document.getElementById("demo").innerHTML = n;
+
+        // -------------------------------------------------------------------------------//
+
+        // Replace "Microsoft" with "W3Schools" in the paragraph below:
+        let tex = "Please visit Microsoft!";
+        let ni = tex.replace(/microsoft/i, "W3Schools");
+        document.getElementById("demo1").innerHTML = ni;
+        // -------------------------------------------------------------------------------//
+
+
+        let te = "Is this All  there all  is?";
+        let result = te.match(/all/g);
+        document.getElementById("demo2").innerHTML = result;
+        // -------------------------------------------------------------------------------//
+
+
+        let t = "\nIs th\nis it?";
+        let resu = t.match(/^is/m);
+        document.getElementById("demo3").innerHTML = resu;
+        // -------------------------------------------------------------------------------//
+        // let result = text.match(/[h]/g);
+        // let result = text.match(/\d/g);
+    </script>
+</body>
+
+</html>
