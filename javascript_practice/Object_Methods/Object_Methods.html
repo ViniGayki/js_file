@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object_Methods</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+      
+        
+
+
+        // Using Built-In Methods
+        const person1 = {
+            firstName: "John",
+            lastName: "Doe",
+            id: 5566,
+        };
+        function name() {
+            return (person1.firstName + " " + person1.lastName).toUpperCase();
+        };
+        // person1.name = function () {
+        //     return this.firstName + " " + this.lastName;
+        // };
+
+
+        document.getElementById("demo1").innerHTML ="My father is " + name(); 
+        // ----------------------------------------------------------------------------
+    </script>
+</body>
+
+</html>
