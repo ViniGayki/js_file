@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object_Accessors </title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <hr>
+    </hr>
+    <p id="demo1"></p>
+    <hr>
+    </hr>
+    <p id="demo2"></p>
+    <hr>
+    </hr>
+    <p id="demo3"></p>
+    <script>
+        // Getter (The get Keyword)
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            language: "English",
+            get lang() {
+                return this.language.toUpperCase();
+            }
+        };
+
+        // Display data from the object using a getter:
+        document.getElementById("demo").innerHTML = person.lang;
+        // --------------------------------------------------------------------------------------------------------------
+
+
+        // Setter (The set Keyword)
+        // Create an object:
+        const per = {
+            firstName: "John",
+            lastName: "Doe",
+            Subject: "Science",
+            set sub(value) {
+                this.Subject = value;
+            }
+        };
+
+        // Set a property using set:
+        per.sub = " Math";
+
+        // Display data from the object:
+        document.getElementById("demo1").innerHTML = per.Subject;
+        // --------------------------------------------------------------------------------------------------------------
+
+
+
+    </script>
+</body>
+
+</html>
