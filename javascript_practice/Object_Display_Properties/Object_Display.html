@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display_Object</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <hr>
+    </hr>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <hr>
+    </hr>
+    <p id="demo4"></p>
+    <hr>
+    </hr>
+    <p id="demo5"></p>
+    <hr>
+    </hr>
+
+
+    <script>
+        // Displaying the Object Properties by name
+        const person = {
+            name: "SONA",
+            age: 30,
+            city: "INDIA"
+        };
+
+        document.getElementById("demo").innerHTML = person.name + ", " + person.age + ", " + person.city;
+        // ---------------------------------------------------------------------------------
+
+        // Displaying the Object in a Loop
+        const p = {
+            name: "John",
+            city: "New York",
+            age: 30,
+            today: new Date(),
+
+        };
+
+        let txt = "";
+        for (let x in p) {
+            txt += p[x] + " ";
+        };
+
+        document.getElementById("demo1").innerHTML = txt;
+
+
+        // Displaying the Object using Object.values()
+        document.getElementById("demo2").innerHTML = Object.values(p);
+
+        //  Displaying the Object using JSON.stringify().........(converted to a string) 
+
+        document.getElementById("demo3").innerHTML = JSON.stringify(p);
+        // ---------------------------------------------------------------------------------
+
+
+        //  using Stringify Functions
+        const pe = {
+            name: "John",
+            city: "New York",
+            today: new Date(),
+            age: function () { return 40; }
+        };
+        pe.age = pe.age.toString();
+        document.getElementById("demo4").innerHTML = JSON.stringify(pe);
+        // ---------------------------------------------------------------------------------
+
+        // Stringify Arrays
+        const arr = ["John", "Peter", "Sally", "Jane"];
+        document.getElementById("demo5").innerHTML = JSON.stringify(arr);
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
