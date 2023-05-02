@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Arrow Function</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <hr>
+    </hr>
+    <p id="demo1"></p>
+    <hr>
+    </hr>
+    <p id="demo2"></p>
+    <hr>
+    </hr>
+    <p id="demo3"></p>
+    <hr>
+    </hr>
+    <p id="demo4"></p>
+    <hr>
+    </hr>
+    <script>
+        myfun = (a, b) => a * b;
+        document.getElementById("demo").innerHTML = myfun(4, 5);
+
+        // ----------------------------------------------------------------
+
+        // Before arrow
+        text = function () {
+            return "Hello Vini !";
+        }
+        document.getElementById("demo1").innerHTML = text();
+        // ----------------------------------------------------------------
+
+        // With arrow
+
+        text1 = () => {
+            return "Hello Monu!";
+        }
+        document.getElementById("demo2").innerHTML = text1();
+        // ----------------------------------------------------------------
+
+        // With arrow
+        text2 = () => "Hello World!";
+        document.getElementById("demo3").innerHTML = text2();
+        // ----------------------------------------------------------------
+
+        // Arrow Function With Parameters:
+        text3 = (val) => "Hello " + val;
+        document.getElementById("demo4").innerHTML = text3("Universe!");
+         // ----------------------------------------------------------------
+
+        // Arrow Function Without Parentheses:
+
+
+    </script>
+
+</body>
+
+</html>
