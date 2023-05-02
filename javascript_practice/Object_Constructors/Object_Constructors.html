@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object_Constructors</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <hr>
+    </hr>
+    <p id="demo1"></p>
+    <hr>
+    </hr>
+    <p id="demo2"></p>
+    <hr>
+    </hr>
+    <p id="demo3"></p>
+    <hr>
+    </hr>
+    <script>
+        // They only create single objects.
+        // Sometimes we need a "blueprint" for creating many objects of the same "type".
+        // that time used constructors
+        function Person(first, last, age, eye) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eye;
+        }
+
+        // Create two Person objects
+        const myFather = new Person("John", "Doe", 50, "blue");
+        const myMother = new Person("Sally", "Rally", 48, "green");
+
+
+        // // Adding a Property to an Object
+        myFather.nationality = "English";
+
+        // Display age
+        document.getElementById("demo").innerHTML =
+            "My father is " + myFather.age + ". My mother is " + myMother.age + ".";
+
+        // Display nationality 
+        document.getElementById("demo1").innerHTML =
+            "My father is " + myFather.nationality;
+
+        // ------------------------------------------------------------------------------------
+
+        // using function create constructors
+
+        function Per(first, last, age, eye) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eye;
+        }
+        // Create two Person objects
+        const myFa = new Person("John", "Doe", 50, "blue");
+        const myMo = new Person("Sally", "GAYKI", 48, "green");
+
+        myMo.name = function () {
+            return this.firstName + " " + this.lastName;
+        }
+        document.getElementById("demo2").innerHTML = myMo.name();
+        // ------------------------------------------------------------------------------------
+
+
+
+        // function can also define  asobject methods:
+        function Perso(first, last, age, eye) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eye;
+            this.namee = function () {
+                return this.firstName + " " + this.lastName
+            };
+        }
+
+        // Create a Perso object
+        const myFatherr = new Perso("John", "Doe", 50, "blue");
+
+        // Display full name
+        document.getElementById("demo3").innerHTML =
+            "My father is " + myFatherr.namee(); 
+    </script>
+</body>
+
+</html>
