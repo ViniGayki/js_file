@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function_closures.</title>
+</head>
+
+<body>
+    <h1>Function_closures.</h1>
+    <button type="button" onclick="myFunction()">Count!</button>
+    <p id="demo"></p>
+    <hr>
+    </hr>
+    <p id="demo1"></p>
+    <hr>
+    </hr>
+    <p id="demo2"></p>
+    <hr>
+    </hr>
+
+
+    <script>
+        const add = (function () {
+            let counter = 0;
+
+            return function () { counter += 1; return counter; }
+        })();
+
+        function myFunction() {
+            document.getElementById("demo").innerHTML = add();
+        }
+        //   ----------------------------------------------------------------
+
+
+        // Nested Functions
+        function addd() {
+            let counterr = 0;
+
+            function plus() { counterr += 1; }
+            plus();
+
+            return counterr;
+        }
+        document.getElementById("demo1").innerHTML = addd();
+        // --------------------------------------------------------------------------------
+
+
+        // A Counter Dilemma   (Counting with a global variable.)
+        let count = 0;
+
+        // Function to increment counter
+        function ad() {
+            count += 1;
+        }
+
+        // Call add() 3 times
+        ad();
+        ad();
+        ad();
+
+        // The counter should now be 3
+        document.getElementById("demo2").innerHTML = "The counter is: " + count;
+    </script>
+</body>
+
+</html>
