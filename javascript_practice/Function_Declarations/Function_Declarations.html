@@ -16,6 +16,12 @@
     <p id="demo1"></p>
     <hr>
     </hr>
+    <p id="demo2"></p>
+    <hr>
+    </hr>
+    <p id="demo3"></p>
+    <hr>
+    </hr>
     <script>
         document.getElementById("demo").innerHTML = myFunction(4, 3);
 
@@ -31,13 +37,13 @@
 
 
         // The Function() Constructor
-        const myFunction = new Function("a", "b", "return a * b");
-        document.getElementById("demo2").innerHTML = myFunction(4, 3);
+        const myFunct = new Function("a", "b", "return a * b");
+        document.getElementById("demo2").innerHTML = myFunct(4, 3);
         // -----------------------------------------------------------------------------------------
 
         // Self-Invoking Functions
         (function () {
-            document.getElementById("demo").innerHTML = "Hello! I called myself";
+            document.getElementById("demo3").innerHTML = "Hello! I called myself";
         })();
         // arroe function
         // const x = (x, y) => x * y;
