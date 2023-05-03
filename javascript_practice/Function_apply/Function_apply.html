@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function apply</title>
+</head>
+
+<body>
+    <h1>Function apply</h1>
+    <p id="demo"></p>
+    <hr>
+    </hr>
+    <p id="demo1"></p>
+    <hr>
+    </hr>
+    
+    <script>
+        // The apply() method is similar to the call() method
+        // The call() method takes arguments separately.
+        // *******The apply() method takes arguments as an array.
+        const person = {
+            fullName: function (city,country) {
+                return this.firstName + " " + this.lastName +","+ city +"," + country;
+            }
+        }
+
+        const person1 = {
+            firstName: "John",
+            lastName: "Doe"
+        }
+
+        // document.getElementById("demo").innerHTML = person.fullName.apply(person1); 
+        document.getElementById("demo").innerHTML = person.fullName.apply(person1, ["Oslo", "Norway"]);
+        // -------------------------------------------------------------------------------------
+        
+        // Max Method
+        document.getElementById("demo1").innerHTML = Math.max.apply(null, [1,2,3]); 
+        // document.getElementById("demo").innerHTML = Math.max.apply(Math, [1,2,3]); 
+        // document.getElementById("demo").innerHTML = Math.max.apply(" ", [1,2,3]); 
+        // document.getElementById("demo").innerHTML = Math.max.apply(0, [1,2,3]);
+    </script>
+</body>
+
+</html>
