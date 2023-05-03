@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Parameters</title>
+</head>
+
+<body>
+    <h1>Function Parameters</h1>
+    <p id="demo"></p>
+    <hr>
+    </hr>
+    <p id="demo1"></p>
+    <hr>
+    </hr>
+    <p id="demo2"></p>
+    <hr>
+    </hr>
+    <script>
+        function functionName(parameter1, parameter2, parameter3) {
+            // code to be executed
+        }
+
+
+
+
+
+
+        // Default Parameter Values
+        function myFunction(x, y = 10) {
+            return x + y;
+        }
+        document.getElementById("demo").innerHTML = myFunction(5);
+        // -----------------------------------------------------------------------
+
+
+        // Function Rest Parameter
+        function sum(...args) {
+            let sum = 0;
+            for (let arg of args) sum += arg;
+            return sum;
+        }
+        let x = sum(4, 9, 16, 25, 29, 100, 66, 77);
+        document.getElementById("demo1").innerHTML = x;
+        // -----------------------------------------------------------------------
+
+
+        // The Arguments Object
+        function findMax() {
+            let max = -Infinity;
+            for (let i = 0; i < arguments.length; i++) {
+                if (arguments[i] > max) {
+                    max = arguments[i];
+                }
+            }
+            return max;
+        }
+        document.getElementById("demo2").innerHTML = findMax(4, 5, 6);
+    </script>
+
+</body>
+
+</html>
