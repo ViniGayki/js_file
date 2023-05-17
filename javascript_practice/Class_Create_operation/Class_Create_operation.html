@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create_class_operation</title>
+</head>
+
+<body>
+    <h1>Create_class_operation</h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        class car {
+            constructor(name, year) {
+                this.fname = name;
+                this.fyear = year;
+            }
+        }
+        const car1 = new car("BMW", 20);
+        const car2 = new car("Audi", 25);
+
+        document.getElementById("demo1").innerHTML = " myfirst car is " + car1.fyear + " mysecound car is " + car2.fname
+
+
+
+
+
+
+        class test {
+            constructor(name) {
+                this.name = name;
+            }
+            static hello(x) {
+                return "Hello " + x.name;
+            }
+        }
+
+        const myCar = new test("Ford");
+        document.getElementById("demo2").innerHTML = test.hello(myCar);
+    </script>
+
+    </script>
+</body>
+
+</html>
