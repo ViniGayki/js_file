@@ -42,7 +42,7 @@
 
         // Display age
         document.getElementById("demo").innerHTML =
-            "My father is " + myFather.age + ". My mother is " + myMother.age + ".";
+            "My father is " + myFather.age + " My mother is " + myMother.age + ".";
 
         // Display nationality 
         document.getElementById("demo1").innerHTML =
@@ -59,8 +59,8 @@
             this.eyeColor = eye;
         }
         // Create two Person objects
-        const myFa = new Person("John", "Doe", 50, "blue");
-        const myMo = new Person("Sally", "GAYKI", 48, "green");
+        const myFa = new per("John", "Doe", 50, "blue");
+        const myMo = new per("Sally", "GAYKI", 48, "green");
 
         myMo.name = function () {
             return this.firstName + " " + this.lastName;
